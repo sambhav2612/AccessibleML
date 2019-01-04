@@ -1,21 +1,30 @@
 {
-  "name": "blairwitch",
+  "name": "accessible-ml",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "mongoose": "^5.4.0",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "shortid": "^2.2.14",
-    "valid-url": "^1.0.9",
-    "dotenv": "^6.2.0",
-    "body-parser": "^1.18.3"
-  }
+    "apollo-boost": "^0.1.23",
+    "graphql": "^14.0.2",
+    "react": "^16.7.0",
+    "react-apollo": "^2.3.3",
+    "react-dom": "^16.7.0",
+    "react-popup": "^0.9.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
