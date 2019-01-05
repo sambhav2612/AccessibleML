@@ -1,0 +1,82 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type User @model {
+  id: ID! @isUnique
+  name: String!
+  email: String! @isUnique
+  password: String!
+  dateOfBirth: DateTime
+
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+
+  googleUserId: String @isUnique
+  facebookUserId: String @isUnique
+
+  posts: [Post!]! @relation(name: "UserPosts")
+}
+
+
+# Uncomment the model below as well
+
+type Post @model {
+  id: ID! @isUnique
+  uri: String!
+
+  author: User! @relation(name: "UserPosts")
+}
+
+
+# added by email-password template: (please uncomment)
+# type User @model {
+#   # Required system field:
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+# 
+#   # Optional system fields (remove if not needed):
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+# 
+#   email: String! @isUnique
+#   password: String!
+# }
+# 
+
+
+
+# added by google template: (please uncomment)
+# type User @model {
+#   # Required system field:
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+# 
+#   # Optional system fields (remove if not needed):
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+# 
+#   googleUserId: String @isUnique
+# }
+# 
+
+
+
+# added by facebook template: (please uncomment)
+# type User @model {
+#   # Required system field:
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+# 
+#   # Optional system fields (remove if not needed):
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+# 
+#   facebookUserId: String @isUnique
+#   email: String # optional, because it's obtained from Facebook API
+# }
+# 
+
+
+
+# added by pusher template: (please uncomment)
+# # This file contains the GraphQL Types
+
+# 
+

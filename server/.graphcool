@@ -1,0 +1,3 @@
+targets:
+  default: dev
+  dev: shared-ap-northeast-1/cjqjj84oead2201992zqib6hi
