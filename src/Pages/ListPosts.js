@@ -1,8 +1,12 @@
+// @flow
+
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Post from './Post';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
+import CustomButton from '../Components/button';
+import Navbar from '../Components/navbar';
 
 const FeedQuery = gql`
     query allPosts {
@@ -16,6 +20,10 @@ const FeedQuery = gql`
 class ListPosts extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+
+        }
     }
 
     render() {

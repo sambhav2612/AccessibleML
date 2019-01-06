@@ -1,8 +1,12 @@
+// @flow
+
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import Button from '../Components/button';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
+import CustomButton from '../Components/button';
+import Navbar from '../Components/navbar';
 
 const addMutation = gql`
   mutation addPost($uri: String!) {
@@ -22,10 +26,10 @@ class CreatePost extends Component {
         }
     }
 
-    _onChange(e) => {
-        this.setState(
+    _onChange = (e) => {
+        this.setState({
             uri: e.target.value
-        );
+        });
     }
 
     render() {
@@ -36,7 +40,7 @@ class CreatePost extends Component {
                         className='w-100 pa3 mv2'
                         value={this.state.uri}
                         placeholder='Article URI'
-                        onChange={_onChange(e)}
+                        onChange={this._onChange}
                     />
                     {this.state.uri &&
                         <Button class='pa3 bg-black-10 bn dim ttu pointer' label="Post Link" onClick={this.handlePost}></Button>

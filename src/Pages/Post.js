@@ -1,8 +1,17 @@
+// @flow
+
 import React, { Component } from 'react';
+import CustomButton from '../Components/button';
+import Navbar from '../Components/navbar';
 
 class Post extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+
+        }
+
     }
 
     render() {

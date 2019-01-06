@@ -10,10 +10,15 @@ This is a simple tool to generate URI shortlinks and categorize them using senti
 - Graph.cool
 - Node.js
 - VS Code
+- ESLint
+- Flow
+
+Uses Airbnb javascript style guide and Tachyons.
 
 ## To do
 
-- :new: Update frontend
+- :construction: update routing
+- :construction: update frontend
 - :new: Update graphql schema
 - :ballot_box_with_check: :ok: Add graphql server and connect w/ database
 - :ballot_box_with_check: :ok: write api endpoints
@@ -21,8 +26,6 @@ This is a simple tool to generate URI shortlinks and categorize them using senti
 ## Motivation
 
 ### Getting Started :arrow_forward:
-
-Assuming that MongoDB is installed locally on your system:
 
 ```bash
 $ git clone https://github.com/sambhav2612/AccessibleML.git

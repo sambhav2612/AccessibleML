@@ -1,5 +1,8 @@
+// this is a reusable popup (overlay) component
+
 import React from 'react';
 import Popup from 'react-popup';
+import '../Styles/App.css';
 
 function Prompt (props) {
     return(
